@@ -7,9 +7,48 @@
     <title>Figuras Geométricas</title>
 </head>
 <body>
-    <h1>
-        Figuras Geométricas
-    </h1>
+    <header>
+        <h1>Figura geométricas</h1>
+        <p>
+            prácticas de JavaScript con HTML
+        </p>
+    </header>
+
+    <section>
+        <h2>Calcula el área y perimetro de un cuadrado</h2>
+
+        <form>
+            <label for="InputCuadrado">
+                escribe cuanto mide cada lado de tu cuadrado:
+            </label>
+            <input id="InputCuadrado" type="number"/>
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Calcular Perímetro
+            </button>
+            <button type="button" onclick="calcularAreaDelCuadrado()">
+                Calcular el área
+            </button>
+        </form>
+        <br>
+        <form>
+            <h3>calcular la altura de un triángulo isósceles</h3>
+            <label for="lado">
+                digita la medida de los lados que son iguales
+            
+            <input id= "lado" type="number">
+            
+            
+        </form>
+        <form >
+            <label for="base">
+            digita la medida de la base del triángulo
+            </label>
+            <input id ="base" type="number">
+            <button type="button" onclick="CalcularAlturaTrianguloIsosceles()">
+                Calcular Altura del Triangulo isósceles
+            </button>
+        </form>
+    </section>
     <script src="./figuras.js"></script>
 </body>
 </html>

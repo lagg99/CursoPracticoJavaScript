@@ -1,39 +1,39 @@
-console.group("Cuadrado");
+/* Para obtener datos que digite el usuario y poder interactuar con esos datos:
+Se debe ejecutar en la consola del navegador el comando document.getElementById("aqui va el id del input")
+ */
+function PerimetroDelCuadrado(lado){
+    return lado*4;
+}
 
-function perimetroDelCuadrado(lado){
- return lado*4;
+function calcularPerimetroCuadrado(){
+    const input=document.getElementById("InputCuadrado").value;//Esto permite obtener lo que ingrese el usuario en la etiqueta input
+    const value=input.nodeValue;//aquí almacenamos el valor
+    
+    const perimetro=PerimetroDelCuadrado(input);
+    alert(perimetro);
+
 }
 
 function AreaDelCuadrado(lado){
     return lado*lado;
 }
 
-
-console.groupEnd();
-console.group("Triángulo");
-
-function PerimetroTriangulo(lado1,lado2,baseDelTriangulo){
-    return lado1+lado2+baseDelTriangulo;
+function calcularAreaDelCuadrado(){
+    const input=document.getElementById("InputCuadrado").value;//se captura y almacena lo que ingresa el usuario
+    //const area= AreaDelCuadrado(input);
+    const resultado=input*input;
+    alert(resultado);
 }
 
-function AreaTriangulo(alturaTriangulo,baseDelTriangulo){
-     return (alturaTriangulo*baseDelTriangulo)/2;
+function CalcularAlturaTrianguloIsosceles(){
+    const lado=document.getElementById("lado").value;
+    const base=document.getElementById("base").value;
+    const altura= Math.sqrt((Math.pow(lado, 2) - (Math.pow(base,2)/4)));
+    if(lado===base){
+        alert("Los lados del triangulo que digitas son iguales, por lo tanto no es un isósceles. Es un equilátero");
+    }else{
+        alert(altura);
+    }
+  
+  
 }
-console.groupEnd();
-
-console.group("Circulo");
-
-function diametro(radio){
-    return radio*2;
-}
-const PI=Math.PI;//PI
-console.log("Pi es:" + PI);
-function perimetroDelCirculo(radio){
-    const DiametroCirculo=diametro(radio);
-    return DiametroCirculo*PI;
-}
-function AreaCirculo(radio){
-    return (radio*radio)*PI;
-}
-console.groupEnd();
-
